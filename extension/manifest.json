@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Glance",
+  "version": "0.1.0",
+  "description": "Glance dashboard as your new tab page.",
+  "chrome_url_overrides": { "newtab": "newtab.html" },
+  "options_page": "options.html",
+  "permissions": ["storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>"],
+  "icons": { "128": "static/app-icon.png" }
+}

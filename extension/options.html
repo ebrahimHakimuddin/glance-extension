@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Glance options</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px system-ui; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+  textarea { width: 100%; box-sizing: border-box; font: 13px ui-monospace, monospace; }
+  #yaml { height: 55vh; }
+  #env { height: 6rem; }
+  section { margin-block: 1.5rem; }
+  h2 { font-size: 1rem; margin-bottom: .4rem; }
+  .row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin-block: .5rem; }
+  #msg.err { color: #d33; white-space: pre-wrap; } #msg.ok { color: #2a7; }
+  li { margin-block: .2rem; } li button { margin-left: .5rem; }
+  small { opacity: .7; }
+</style>
+<h1>Glance config</h1>
+<section>
+  <h2>glance.yml</h2>
+  <div class="row">
+    <label>Upload glance.yml: <input type="file" id="file" accept=".yml,.yaml,text/yaml"></label>
+    <button id="export">Download</button>
+  </div>
+  <textarea id="yaml" spellcheck="false"></textarea>
+</section>
+<section>
+  <h2>Environment variables &amp; secrets</h2>
+  <small>One <code>NAME=value</code> per line. Used for <code>${NAME}</code>, <code>${secret:name}</code> and <code>${readFileFromEnv:NAME}</code> (value = the secret itself).</small>
+  <textarea id="env" spellcheck="false"></textarea>
+</section>
+<section>
+  <h2>Included files</h2>
+  <small>Files referenced with <code>!include: path</code>. Add every included file (subdirectories are matched by path, then file name).</small>
+  <div class="row"><input type="file" id="inc" multiple></div>
+  <ul id="incList"></ul>
+</section>
+<div class="row"><button id="save"><b>Save</b></button> <button id="reset">Reset to default</button> <button id="cache">Clear widget cache</button></div>
+<p id="msg"></p>
+<script type="module" src="options.js"></script>
