@@ -8,6 +8,7 @@ cp manifest.json newtab.html options.html *.js dist/
 rm -f dist/build.js
 cp -r vendor dist/
 cp -r $S/fonts $S/icons $S/js $S/app-icon.png $S/favicon.png dist/static/
+cp icon.png dist/static/app-icon.png; cp icon.png dist/static/favicon.png
 mkdir -p dist/static/css
 
 # Inline the @import chain of css/main.css (mirrors bundledCSSContents in embed.go).

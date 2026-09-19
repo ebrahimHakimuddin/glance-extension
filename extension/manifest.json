@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Glance",
+  "name": "Glance Chrome",
   "version": "0.1.0",
-  "description": "Glance dashboard as your new tab page.",
+  "description": "Your Glance dashboard as the Chrome new tab page. Unofficial port; runs entirely in your browser.",
   "chrome_url_overrides": { "newtab": "newtab.html" },
   "options_page": "options.html",
   "permissions": ["storage", "declarativeNetRequest"],
