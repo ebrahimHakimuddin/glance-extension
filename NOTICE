@@ -1,0 +1,5 @@
+Glance Chrome is based on Glance (https://github.com/glanceapp/glance),
+Copyright (C) the Glance authors, licensed under AGPL-3.0.
+Modified 2026 by Ebrahim Tayabali: ported to a Chrome Manifest V3 new-tab extension
+(see extension/). Modifications are also licensed under AGPL-3.0.
+Bundled: js-yaml (MIT), see extension/vendor/js-yaml.LICENSE.
