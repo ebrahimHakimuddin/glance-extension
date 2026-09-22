@@ -17,7 +17,7 @@ Glance Chrome is an unofficial port of Glance, the self-hosted feed dashboard, t
 
 ## Install
 
-From the Chrome Web Store: *(link once published)*.
+From the Chrome Web Store: https://chromewebstore.google.com/detail/glance-chrome/hfogombfpedkmmafdnhfmnebhaobicgg
 
 From source:
 
